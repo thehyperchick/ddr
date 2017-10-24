@@ -26,7 +26,7 @@ grass = pygame.image.load("resources/images/grass.png")
 castle = pygame.image.load("resources/images/castle.png")
 arrow = pygame.image.load("resources/images/bullet.png")
 
-badguyimg1 = pygame.image.load("resources/images/badguy.png")
+badgufyimg1 = pygame.image.load("resources/images/badguy.png")
 badguyimg=badguyimg1
 
 healthbar = pygame.image.load("resources/images/healthbar.png")
