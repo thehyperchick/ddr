@@ -109,12 +109,12 @@ while running:
     screen.blit(timerText, textRect)
     # End Draw Clock
 
-    for x in range(len(activeArrows)):
-        activeArrows[x]["top"] += 5
-        if activeArrows[x]["top"] > 560:
-            activeArrows.pop(x)
+    for arrow in activeArrows:
+        arrow["top"] += 5
+        if arrow["top"] > 600:
+            activeArrows.remove(arrow)
         else:
-            screen.blit(activeArrows[x]['type'], (activeArrows[x]['left'], activeArrows[x]['top']))
+            screen.blit(arrow['type'], (arrow['left'], arrow['top']))
 
     pygame.display.flip()
     if pygame.time.get_ticks() >= GAMELENGTH:
