@@ -189,3 +189,103 @@ while running:
             activeArrows.append(release[0][1])
             release.pop(0)
     pygame.display.flip()
+
+    ##new beats
+    ### Set up the Release times of the Arrows
+##release = [
+##    [1000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [4000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [6000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [8000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [10000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    
+##    [13000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [17000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [18000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [19000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [21000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [23000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [24000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    
+##    [25000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [26000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [27000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [28000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [29000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [30000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [33000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [34000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [35000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [37000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [38000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [39000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [41000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [40000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##
+##    [42000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [43000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    
+##    [44000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [45000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [46000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    
+##    [47000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [49000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [50000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [52000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [54000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [56000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [57000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [58000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [59000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [60000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [30833, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [61000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [62000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [64000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [65000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [66000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [67000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [68000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [69000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##   
+##    [70000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [71000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    
+####    [52000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [72000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##
+##
+####    [40000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [73000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##
+##  
+####    [43332, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [44165, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##
+##
+####    [50000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [75000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [76000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [77000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [78000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+##    [79000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    
+####    [81000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [80000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+####    [56664, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [81000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+####    [72000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+####    [60000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [86000, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+####    [77000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+##    [81000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+##    [82000, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+####    [63332, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [64165, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+##    [86000, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+####    [66664, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}],
+####    [67497, {'image': arrow_l, 'keyType': pygame.K_LEFT, 'left': LEFT_POS, 'top': START_POS}],
+####    [68330, {'image': arrow_u, 'keyType': pygame.K_UP, 'left': UP_POS, 'top': START_POS}],
+####    [69163, {'image': arrow_d, 'keyType': pygame.K_DOWN, 'left': DOWN_POS, 'top': START_POS}],
+####    [70000, {'image': arrow_r, 'keyType': pygame.K_RIGHT, 'left': RIGHT_POS, 'top': START_POS}]
